@@ -1,0 +1,63 @@
+.user-competitions-container {
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+.user-competitions-title {
+    color: #1890ff;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.competition-card {
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.competition-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.competition-title {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.view-details-button,
+.view-results-button,
+.delete-button {
+    font-weight: bold;
+}
+
+.view-details-button {
+    color: #52c41a;
+}
+
+.view-results-button {
+    color: #1890ff;
+}
+
+.delete-button {
+    color: #f5222d;
+}
+
+.delete-modal .ant-modal-content {
+    border-radius: 8px;
+}
+
+.delete-modal .ant-modal-header {
+    color: #fff;
+    border-radius: 8px 8px 0 0;
+}
+
+.delete-modal .ant-modal-footer .ant-btn-danger {
+    background-color: #f5222d;
+    border-color: #f5222d;
+}
+
+.delete-modal .ant-modal-footer .ant-btn:hover {
+    opacity: 0.85;
+}

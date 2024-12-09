@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Thi Trắc Nghiệm</title>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .container {
+            text-align: center;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+        }
+        #timer {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        #alert-message {
+            display: none;
+            color: red;
+            font-size: 18px;
+            margin-top: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Bài thi trắc nghiệm</h1>
+        <div id="timer">10:00</div>
+        <button id="start-btn">Bắt đầu làm bài</button>
+        <p id="alert-message">Bài đã đóng vì bạn đã chuyển tab hoặc ẩn cửa sổ.</p>
+    </div>
+
+    <script>
+        let timer;
+        let timeLeft = 600; // 10 phút
+        let hiddenCount = 0;
+
+        const startBtn = document.getElementById('start-btn');
+        const alertMessage = document.getElementById('alert-message');
+        const timerDisplay = document.getElementById('timer');
+
+        function startTimer() {
+            timer = setInterval(function() {
+                if (timeLeft <= 0) {
+                    clearInterval(timer);
+                    alert("Hết thời gian! Bài thi đã kết thúc.");
+                } else {
+                    timeLeft--;
+                    timerDisplay.innerText = formatTime(timeLeft);
+                }
+            }, 1000);
+        }
+
+        function formatTime(seconds) {
+            const minutes = Math.floor(seconds / 60);
+            const secs = seconds % 60;
+            return `${minutes}:${secs < 10 ? '0' : ''}${secs}`;
+        }
+
+        function pauseExam() {
+            clearInterval(timer);
+            alertMessage.style.display = 'block';
+        }
+
+        function resumeExam() {
+            alertMessage.style.display = 'none';
+            startTimer();
+        }
+
+        startBtn.addEventListener('click', function() {
+            startTimer();
+            startBtn.disabled = true; // Khi bắt đầu làm bài, vô hiệu hóa nút
+        });
+
+        document.addEventListener('visibilitychange', function() {
+            if (document.hidden) {
+                hiddenCount++;
+                if (hiddenCount <= 1) {
+                    pauseExam();
+                } else {
+                    alert("Bạn đã chuyển tab hoặc ẩn cửa sổ quá nhiều lần! Bài thi sẽ kết thúc.");
+                    resumeExam();
+                }
+            } else {
+                if (hiddenCount <= 3) {
+                    resumeExam();
+                }
+            }
+        });
+    </script>
+</body>
+</html>

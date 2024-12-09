@@ -1,0 +1,4 @@
+ALTER TABLE `users`
+    ADD COLUMN `fullname` VARCHAR(255) DEFAULT NULL,
+    ADD COLUMN `date_of_birth` DATETIME DEFAULT NULL,
+    ADD COLUMN `phone_number` VARCHAR(20) DEFAULT NULL;

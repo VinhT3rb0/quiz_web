@@ -1,0 +1,1 @@
+DROP TRIGGER IF EXISTS `generate_competition_code`;

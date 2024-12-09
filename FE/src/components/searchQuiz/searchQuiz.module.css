@@ -1,0 +1,19 @@
+
+.search-results {
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  border-radius: 4px;
+  max-height: 300px; /* Giới hạn chiều cao cho danh sách kết quả */
+  overflow-y: auto; /* Thêm thanh cuộn nếu danh sách quá dài */
+}
+
+.search-results .ant-card {
+  padding: 10px;
+}
+
+.search-results .ant-list-item {
+  border-bottom: 1px solid #f0f0f0;
+}

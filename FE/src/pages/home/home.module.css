@@ -1,0 +1,13 @@
+         
+.ant-layout {
+    min-height: 100vh;
+}
+.ant-layout-header span.trigger svg {
+    width: 25px !important;
+    height: 25px !important;
+    margin: 10px !important;
+}
+.ant-input-affix-wrapper {
+    background-color: #F2F2F2;
+    height: 50px !important;
+}      

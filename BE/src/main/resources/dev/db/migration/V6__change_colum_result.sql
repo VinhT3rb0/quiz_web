@@ -1,0 +1,3 @@
+ALTER TABLE `results`
+    CHANGE COLUMN `score` `total_correct` INTEGER DEFAULT NULL,
+    ADD COLUMN `score` FLOAT DEFAULT NULL;

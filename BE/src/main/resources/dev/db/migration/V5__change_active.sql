@@ -1,0 +1,2 @@
+ALTER TABLE `users`
+    CHANGE COLUMN `enabled` `active` BOOLEAN DEFAULT NULL;

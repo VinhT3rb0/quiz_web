@@ -1,0 +1,61 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.ant-input-affix-wrapper{
+  height: 50px !important;
+}
+.ant-card-head {
+  background-image: linear-gradient(90.57deg, rgb(62, 101, 254) 0%, rgb(210, 60, 255) 100%) !important;
+
+}
+.ant-card-head-title {
+  color: #fff;
+}
+.ant-btn-primary {
+  /* background-color: #a076cc !important; */
+  background-image: linear-gradient(90.57deg, rgb(62, 101, 254) 0%, rgb(210, 60, 255) 100%) !important;
+}
+/* .ant-input::placeholder  {
+  color: #fff !important;
+} */
+/* .ant-tabs .ant-tabs-tab-btn {
+  font-size: 16px;
+  color: #9F9FB7;
+} */
+.ant-layout-header {
+  /* background-image: linear-gradient(90.57deg, rgb(62, 101, 254) 0%, rgb(210, 60, 255) 100%) !important; */
+  background: #fff;
+
+
+}
+.slick-track{
+  /* width: auto !important; */
+}
+
+a{
+  text-decoration: none;
+}
+.ant-layout-sider-trigger {
+  display: none;
+}
+.ant-input-outlined {
+  height: 40px;
+}
+.ant-input-search .ant-input-search-button {
+  height: 40px;
+}
+
+.slick-prev, .slick-next {
+  display: none !important;
+}
